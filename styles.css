@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;900&display=swap");
+.header {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  background-color: #ceedd2;
+}
+.header .navigation {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+}
+.header .navigation a {
+  color: hsl(129, 45%, 9%);
+  text-decoration: none;
+  font-size: 1.5rem;
+  letter-spacing: 5px;
+}
+.header .navigation a:hover {
+  color: #30813b;
+}
+.header .navigation input {
+  width: 50%;
+  height: 30px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  transition: 1s;
+  box-shadow: 1px 7px 18px -11px rgba(0, 0, 0, 0.78);
+}
+.header .navigation input::placeholder {
+  color: hsl(129, 45%, 9%);
+  padding: 5px;
+}
+
+.information {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  width: 100%;
+  height: 80vh;
+}
+.information .temp {
+  text-align: center;
+  grid-area: 1/1/4/2;
+  background-color: #ceedd2;
+}
+.information .temp h1 {
+  font-size: 3rem;
+  letter-spacing: 5px;
+  margin: 10px;
+}
+.information .temp img {
+  margin-bottom: 20px;
+  width: 100px;
+  height: 100px;
+}
+.information .temp div {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+.information .hourly-temp {
+  grid-area: 1/2/2/3;
+  background-color: #ceedd2;
+  display: flex;
+  justify-content: space-around;
+}
+.information .hourly-temp img {
+  width: 50px;
+  height: 50px;
+}
+.information .hourly-temp div {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.information .files-like {
+  grid-area: 2/2/3/3;
+  background-color: #ceedd2;
+  display: flex;
+  justify-content: space-around;
+}
+.information .wekkly {
+  grid-area: 3/2/4/3;
+  background-color: #ceedd2;
+  display: flex;
+  justify-content: space-around;
+}
+.information .wekkly img {
+  width: 30px;
+  height: 30px;
+}
+.information .wekkly div {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: #30813b;
+  padding: 0 10px;
+}/*# sourceMappingURL=styles.css.map */

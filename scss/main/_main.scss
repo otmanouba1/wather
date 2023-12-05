@@ -1,0 +1,89 @@
+@use '../ver/varaibl' as *;
+
+.information {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    width: 100%;
+    height: 80vh;
+
+
+    .temp {
+        text-align: center;
+        grid-area: 1 / 1 / 4 / 2;
+        background-color: $third;
+
+        h1 {
+            font-size: 3rem;
+            letter-spacing: 5px;
+            margin: 10px;
+        }
+
+        img {
+            margin-bottom: 20px;
+            width: 100px;
+            height: 100px;
+        }
+
+        div {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-around;
+
+        }
+    }
+
+    .hourly-temp {
+        grid-area: 1 / 2 / 2 / 3;
+        background-color: $third;
+        display: flex;
+        justify-content: space-around;
+
+        img {
+
+            width: 50px;
+            height: 50px;
+        }
+
+        div {
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+
+        }
+    }
+
+    .files-like {
+        grid-area: 2 / 2 / 3 / 3;
+        background-color: $third;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .wekkly {
+        grid-area: 3 / 2 / 4 / 3;
+        background-color: $third;
+        display: flex;
+        justify-content: space-around;
+
+        img {
+
+            width: 30px;
+            height: 30px;
+        }
+
+        div {
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+
+        }
+    }
+}

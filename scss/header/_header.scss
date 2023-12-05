@@ -1,0 +1,45 @@
+@use '../ver/varaibl' as *;
+
+.header {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    background-color: $third;
+
+    .navigation {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 40px;
+        padding: 10px;
+
+        a {
+            color: $secend;
+            text-decoration: none;
+            font-size: 1.5rem;
+            letter-spacing: 5px;
+
+            &:hover {
+                color: $primiry-color;
+            }
+        }
+
+        input {
+
+            width: 50%;
+            height: 30px;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+            transition: 1s;
+            box-shadow: 1px 7px 18px -11px rgba(0, 0, 0, 0.78);
+
+            &::placeholder {
+                color: $secend;
+                padding: 5px;
+            }
+        }
+    }
+}
