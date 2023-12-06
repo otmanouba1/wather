@@ -131,7 +131,7 @@ body {
   padding: 0 100px;
 }
 
-@media (max-width: 780px) {
+@media (max-width: 860px) {
   body {
     padding: 10px 5px;
   }
@@ -141,13 +141,20 @@ body {
     height: auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
     grid-column-gap: 10px;
     grid-row-gap: 10px;
   }
   .information .temp {
-    height: 90vh;
+    height: 65vh;
     grid-area: 1/1/2/2;
+  }
+  .information .temp h1 {
+    font-size: 1.9rem;
+  }
+  .information .temp img {
+    width: 70px;
+    height: 70px;
   }
   .information .hourly-temp {
     display: flex;
@@ -195,5 +202,37 @@ body {
   }
   .hourly-temp div {
     margin: 6px 0;
+  }
+  .files-like {
+    margin: 10px 0;
+  }
+  .wekkly {
+    display: block;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+  .wekkly .firstday {
+    grid-area: 1/1/2/2;
+  }
+  .wekkly .secendday {
+    grid-area: 1/2/2/3;
+  }
+  .wekkly .thirdday {
+    grid-area: 1/3/2/4;
+  }
+  .wekkly .dayfive {
+    grid-area: 2/1/3/2;
+  }
+  .wekkly .daysex {
+    grid-area: 2/2/3/3;
+  }
+  .wekkly .daysiven {
+    grid-area: 2/3/3/4;
+  }
+  .wekkly .dayeight {
+    grid-area: 3/2/4/3;
   }
 }/*# sourceMappingURL=styles.css.map */
