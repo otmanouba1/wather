@@ -138,6 +138,7 @@ body {
 }
 @media (max-width: 780px) {
   .information {
+    height: auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
@@ -163,5 +164,36 @@ body {
   }
   .information .wekkly {
     grid-area: 3/1/4/3;
+  }
+}
+@media (max-width: 540px) {
+  .information {
+    display: block;
+    gap: 20px;
+    height: auto;
+  }
+  .information .temp {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 250px;
+    padding: 10px;
+  }
+  .information .temp h1 {
+    font-size: 1.4rem;
+  }
+  .information .temp img {
+    width: 60px;
+    height: 60px;
+  }
+  .information .temp .visiblenot {
+    display: none;
+    height: 40px;
+  }
+  .hourly-temp {
+    margin: 10px 0;
+    height: 290px;
+  }
+  .hourly-temp div {
+    margin: 6px 0;
   }
 }/*# sourceMappingURL=styles.css.map */
