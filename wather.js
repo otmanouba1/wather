@@ -8,14 +8,11 @@ const watherIcons = {
 
 const wather = () => {
   const url =
-    "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/londona?unitGroup=metric&key=QW7V7T2YZ54RJF6VSQGGBWUTQ&contentType=json";
-  fetch(url, {
-    method: "GET",
-    headers: {},
-  }).then((response) => {
-    console.log(response.json);
-  });
+    "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/londona,uk?&key=QW7V7T2YZ54RJF6VSQGGBWUTQ&contentType=json";
+  fetch(url)
+    .then((response) => console.log(response))
+    .then((data) => {
+      console.log(data);
+    });
 };
-
 wather();
-

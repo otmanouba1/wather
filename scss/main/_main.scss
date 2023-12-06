@@ -38,9 +38,9 @@
 
     .hourly-temp {
         grid-area: 1 / 2 / 2 / 3;
-        background-color: $third;
+        // background-color: $third;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
 
         img {
 
@@ -49,7 +49,9 @@
         }
 
         div {
+            background-color: $third;
             margin-bottom: 20px;
+            padding: 35px;
             display: flex;
             flex-direction: column;
             align-items: center;
