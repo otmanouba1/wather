@@ -108,6 +108,7 @@
   background-color: #ceedd2;
   display: flex;
   justify-content: space-around;
+  gap: 20px;
 }
 .information .wekkly img {
   width: 30px;

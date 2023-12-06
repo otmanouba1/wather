@@ -13,7 +13,7 @@ const wather = () => {
     method: "GET",
     headers: {},
   }).then((response) => {
-    console.log(response);
+    console.log(response.json);
   });
 };
 
