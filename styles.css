@@ -75,7 +75,7 @@
   width: 100px;
   height: 100px;
 }
-.information .temp div {
+.information .temp .flex {
   margin-bottom: 20px;
   display: flex;
   justify-content: space-around;
@@ -146,7 +146,6 @@ body {
     grid-row-gap: 10px;
   }
   .information .temp {
-    height: 65vh;
     grid-area: 1/1/2/2;
   }
   .information .temp h1 {
