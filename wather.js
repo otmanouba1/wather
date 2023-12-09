@@ -2,6 +2,7 @@ const input = document.querySelector(".input");
 const temp = document.querySelector(".temp");
 const hourlyTemp = document.querySelector(".hourly-temp");
 const filesLike =document.querySelector('.files-like')
+const wekly=document.querySelector('.wekkly')
 input.addEventListener("keypress", (e) => {
   if (e.key === "Enter") {
     e.preventDefault();
@@ -48,12 +49,15 @@ const editHtml = (data) => {
       <p>${data.days[0].hours[i].datetime}</p>
       <img src="iconses/${data.days[0].hours[i].icon}.svg" alt="" />
     </div>`
-    if(data.days[0].hours.length>=20){
-      i+=6
-      
-    } else if(data.days[0].hours.length>=10){
+    if(data.days[0].hours.length<=10){
       i+=3
       
+    } else if(data.days[0].hours.length>=20){
+      i+=7
+      
+    }
+    else{
+      i+=5
     }
       
     }
@@ -65,17 +69,31 @@ const editHtml = (data) => {
       <div>  <p>${data.days[0].hours[i].datetime}</p>
        <h5>files like</h5>
        <p>${data.days[0].hours[i].feelslike}</p></div>`
-       if(data.days[0].hours.length>=20){
-        i+=6
-        
-      } else if(data.days[0].hours.length>=10){
+       if(data.days[0].hours.length<=10){
         i+=3
         
+      }else if(data.days[0].hours.length>=20){
+        i+=7
+        
+      }
+      else{
+        i+=5
       }
       
 }
-   
-    // console.log(data.days[0].hours.length);
+wekly.innerHTML=''
+for (let i = 0; i < data.days.length-8; i++) {
+  let date = new Date(data.days[i].datetime)
+  let Nesxtday=date.toLocaleDateString('en-EN',{ weekday: 'long' })
+ 
+
+wekly.innerHTML+=`
+<div >
+  <p>${Nesxtday}</p>
+  <img src="iconses/${data.days[i].icon}.svg" alt="" /> 
+</div>`
+
+}
 };
 
 
@@ -85,14 +103,3 @@ const editHtml = (data) => {
 
 
 
-// `
-//     <div>
-//     <p>${data.days[0].hours[0].datetime}</p>
-//     <img src="iconses/${data.days[0].hours[0].icon}.svg" alt="" />
-//   </div>
-//   <div>
-//     <p>${data.days[0].hours[3].datetime}</p>
-//     <img src="iconses/${data.days[0].hours[3].icon}.svg" alt="" />
-//   </div>
- 
-//     `

@@ -41,6 +41,10 @@
   outline: none;
   transition: 1s;
 }
+.header .navigation .search-div .input::-moz-placeholder {
+  color: hsl(129, 45%, 9%);
+  padding: 5px;
+}
 .header .navigation .search-div .input::placeholder {
   color: hsl(129, 45%, 9%);
   padding: 5px;
@@ -129,6 +133,10 @@ body {
   font-family: "Roboto", sans-serif;
   background-color: #30813b;
   padding: 0 100px;
+}
+
+div {
+  text-align: center;
 }
 
 @media (max-width: 860px) {
