@@ -9,6 +9,8 @@ input.addEventListener("keypress", (e) => {
     wather(input.value);
   }
 });
+const city=''
+
 const wather = (cityname) => {
   const url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${cityname}?&key=QW7V7T2YZ54RJF6VSQGGBWUTQ&contentType=json`;
   fetch(url)
@@ -98,6 +100,10 @@ wekly.innerHTML+=`
 
 
 
+window.addEventListener('load',()=>{
+  fetch('http://ip-api.com/json/?fields=61439').then(res=>res.json()).then(data=> wather(data.city))
+ 
+})
 
 
 
