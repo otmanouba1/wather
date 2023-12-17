@@ -3,6 +3,7 @@ const temp = document.querySelector(".temp");
 const hourlyTemp = document.querySelector(".hourly-temp");
 const filesLike =document.querySelector('.files-like')
 const wekly=document.querySelector('.wekkly')
+const time=document.querySelector('.time')
 input.addEventListener("keypress", (e) => {
   if (e.key === "Enter") {
     e.preventDefault();
@@ -107,5 +108,13 @@ window.addEventListener('load',()=>{
 
 
 
-
+const clock=setInterval(
+  function timer(){
+  let date = new Date()
+  let hours = date.getHours();
+  let min = date.getMinutes();
+  let sec = date.getSeconds();
+  time.textContent=hours+':'+min+':'+sec
+  } ,1000);
+  
 
