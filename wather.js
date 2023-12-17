@@ -4,14 +4,21 @@ const hourlyTemp = document.querySelector(".hourly-temp");
 const filesLike =document.querySelector('.files-like')
 const wekly=document.querySelector('.wekkly')
 const time=document.querySelector('.time')
-input.addEventListener("keypress", (e) => {
+const searchIcons=document.querySelector('.search-icons')
+
+
+const search=()=>{
+  input.dispatchEvent(new KeyboardEvent('keypress',{'key':'Enter'}))
+  };
+
+input.addEventListener("keypress" , (e)=> {
   if (e.key === "Enter") {
     e.preventDefault();
     wather(input.value);
   }
-});
-const city=''
+} );
 
+const city=''
 const wather = (cityname) => {
   const url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${cityname}?&key=QW7V7T2YZ54RJF6VSQGGBWUTQ&contentType=json`;
   fetch(url)
@@ -114,7 +121,12 @@ const clock=setInterval(
   let hours = date.getHours();
   let min = date.getMinutes();
   let sec = date.getSeconds();
-  time.textContent=hours+':'+min+':'+sec
+  if(hours>=12){
+    hours-=12
+    sec=sec+'PM'
+  }
+  let format=hours+':'+min+':'+sec
+  time.textContent= format
   } ,1000);
   
 
